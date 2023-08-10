@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // Default import
 import Header from "./components/Header.js";
+// Named import
+import { Title } from "./components/Header.js";
 
 
 /**
