@@ -2,8 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // Default import
 import Header from "./components/Header.js";
+import Body from "./components/Body.js";
+import Footer from "./components/Footer.js";
 // Named import
-import { Title } from "./components/Header.js";
+// import { Title } from "./components/Header.js";
+import * as XYZ from "./components/Header.js";
 
 
 /**
@@ -1851,35 +1854,6 @@ const burgerKing = {
   Rating : "4.2"
 }
 
-// Restaurant card
-const RestaurantCard = ({name,cuisines,cloudinaryImageId,lastMileTravel}) => {
-  return (
-    <div className="card">
-      <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}/>
-      <h2>{name}</h2>
-     <h3>{cuisines.join(", ")}</h3>
-      <h3>{lastMileTravel} minutes</h3> 
-    </div>
-  )
-}
-
-const Body = ()=>{
-  return (
-    <div className = "restaurant-list">
-    {
-      restaurantList.map((restaurant) =>{
-        return <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>;
-      })
-    }
-    </div>
-  );
-}
-
-const Footer = ()=>{
-  return (
-    <h4>footer</h4>
-  );
-}
 const AppLayout = () => {
    return (
     <>
